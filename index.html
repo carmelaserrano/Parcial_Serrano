@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Formulario de Registración</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="form-container">
+    <form id="registroForm">
+
+      <div>
+        <label>Apellido:</label>
+        <input type="text" id="apellido" required>
+        <button type="button" onclick="validarApellido()">Validar Apellido</button>
+      </div>
+
+      <div>
+        <label>Nombre:</label>
+        <input type="text" id="nombre" required>
+        <button type="button" onclick="validarNombre()">Validar Nombre</button>
+      </div>
+
+      <div>
+        <label>DNI:</label>
+        <input type="text" id="dni" maxlength="8" required>
+        <button type="button" onclick="validarDNI()">Validar DNI</button>
+      </div>
+
+      <div>
+        <label>Fecha de Nacimiento:</label>
+        <input type="date" id="fechaNacimiento" required>
+        <button type="button" onclick="validarFechaNacimiento()">Validar Fecha</button>
+      </div>
+
+      <div>
+        <label>Email:</label>
+        <input type="email" id="email" required>
+        <button type="button" onclick="validarEmail()">Validar Email</button>
+      </div>
+
+      <div>
+        <button type="button" onclick="hacerPreguntas()">Preguntas-Respuestas</button>
+      </div>
+
+      <label>Sus respuestas fueron:</label>
+      <input type="text" id="respuestas" readonly>
+
+      <br><br>
+      <button type="submit" onclick="return validarFormulario()">Enviar</button>
+
+    </form>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
